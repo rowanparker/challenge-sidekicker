@@ -7,6 +7,10 @@ I have used Symfony, rather than Lumen and Svelte rather than React.
 On boot the php container runs `composer install` internally, so you might need to wait 15-30 seconds for the service to be
 ready.
 
+`docker-compose logs -f php`
+
+Watch until you see the "GET /ping" log entrries every 10 seconds.
+
 There are two commands you can try:
 
 `docker-compose exec php bin/console app:import-csv:league`
