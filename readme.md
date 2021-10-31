@@ -29,7 +29,7 @@ To reset the database to try different import commands use:
 
 To run tests:
 
-`docker-compose exec php bin/phpunit` <-- Execute the actual tests
+`docker-compose exec php bin/phpunit`
 
 The tests just verify that the validation attributes on the entities are correct.
 There are no functional tests.
