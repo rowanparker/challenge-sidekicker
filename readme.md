@@ -31,8 +31,8 @@ To run tests:
 
 `docker-compose exec php bin/phpunit` <-- Execute the actual tests
 
-The test just verify that the validation attributes on the entities are correct.
-There are no funcitonal tests.
+The tests just verify that the validation attributes on the entities are correct.
+There are no functional tests.
 
 `https://localhost` to access the frontend. Accept the self-signed certificate.
 
