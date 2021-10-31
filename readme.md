@@ -9,7 +9,7 @@ ready.
 
 `docker-compose logs -f php`
 
-Watch until you see the "GET /ping" log entrries every 10 seconds.
+Watch until you see the "GET /ping" log entries every 10 seconds.
 
 There are two commands you can try:
 
