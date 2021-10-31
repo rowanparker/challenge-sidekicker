@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="border-bottom">
+    <div class="container">
+        <div class="row py-3 border-bottom">
+            <div class="col-12 fs-5 fw-light">
+                {{ job.title }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row py-3">
+        <div class="col-12 fw-bold">
+            <a href="{{ path('html_index') }}" class="btn btn-light">Back</a>
+        </div>
+        <div class="col-12 fw-bold">
+            Title:
+        </div>
+        <div class="col-12">
+            {{ job.title }}
+        </div>
+        <div class="col-12 fw-bold">
+            Description:
+        </div>
+        <div class="col-12">
+            {{ job.description }}
+        </div>
+        <div class="col-12 fw-bold">
+            Location:
+        </div>
+        <div class="col-12">
+            {{ job.location }}
+        </div>
+        <div class="col-12 fw-bold">
+            Applicants
+        </div>
+        <div class="col-12">
+            <ul>
+            {% for jobApplicant in job.jobApplicants %}
+                <li>{{ jobApplicant.applicant.name }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

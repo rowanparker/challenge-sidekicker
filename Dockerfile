@@ -6,6 +6,13 @@
 # https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
 ARG PHP_VERSION=8.0
 ARG CADDY_VERSION=2
+ARG NODE_VERSION=16.6
+
+FROM node:${NODE_VERSION}-alpine3.14 AS symfony_npm
+WORKDIR /srv/app
+COPY . .
+RUN npm install; \
+    npm run build
 
 # "php" stage
 FROM php:${PHP_VERSION}-fpm-alpine AS symfony_php

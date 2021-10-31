@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="border-bottom">
+        <div class="container">
+            <div class="row py-3 border-bottom">
+                <div class="col-12 fs-5 fw-light">
+                    Job List
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row my-2 fw-bold">
+            <div class="col-12 col-md-6">
+                Title
+            </div>
+            <div class="col-12 col-md-3">
+                Location
+            </div>
+            <div class="col-12 col-md-3">
+                Date
+            </div>
+        </div>
+        {% for job in jobs %}
+        <div class="row my-2">
+            <div class="col-12 col-md-6">
+                <a href="{{ path('html_show', {id: job.id}) }}">{{ job.title }}</a>
+            </div>
+            <div class="col-12 col-md-3">
+                {{ job.location }}
+            </div>
+            <div class="col-12 col-md-3">
+                {{ job.date|date('d/m/Y') }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

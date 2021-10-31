@@ -18,6 +18,16 @@ services:
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
       - ./public:/srv/app/public:ro
 
+  npm:
+    build:
+      context: .
+      target: symfony_npm
+    depends_on:
+      - caddy
+    volumes:
+      - ./:/srv/app:rw,cached
+    command: 'sh -c "npm install; npm run watch"'
+
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###
 

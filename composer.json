@@ -6,15 +6,16 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": "^8",
+        "php": "8.0.*",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "api-platform/core": "^2.6",
         "composer/package-versions-deprecated": "1.11.99.4",
-        "doctrine/annotations": "^1.0",
+        "doctrine/annotations": "^1.13",
         "doctrine/doctrine-bundle": "^2.4",
-        "doctrine/doctrine-migrations-bundle": "^3.2",
+        "doctrine/doctrine-migrations-bundle": "3.1.1",
         "doctrine/orm": "^2.10",
+        "league/csv": "^9.7",
         "nelmio/cors-bundle": "^2.1",
         "nesbot/carbon": "^2.53",
         "phpdocumentor/reflection-docblock": "^5.3",
@@ -31,8 +32,10 @@
         "symfony/runtime": "5.3.*",
         "symfony/security-bundle": "5.3.*",
         "symfony/serializer": "5.3.*",
+        "symfony/string": "5.3.*",
         "symfony/twig-bundle": "5.3.*",
         "symfony/validator": "5.3.*",
+        "symfony/webpack-encore-bundle": "^1.12",
         "symfony/yaml": "5.3.*"
     },
     "config": {
@@ -78,5 +81,11 @@
             "require": "5.3.*",
             "docker": true
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "symfony/browser-kit": "5.3.*",
+        "symfony/css-selector": "5.3.*",
+        "symfony/phpunit-bridge": "^5.3"
     }
 }

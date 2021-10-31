@@ -1,0 +1,30 @@
+{
+    "devDependencies": {
+        "@symfony/stimulus-bridge": "^2.0.0",
+        "@symfony/webpack-encore": "^1.0.0",
+        "@tsconfig/svelte": "^2.0.1",
+        "@types/webpack-env": "^1.16.2",
+        "bootstrap": "^5.1.1",
+        "bootstrap-icons": "^1.5.0",
+        "core-js": "^3.0.0",
+        "file-loader": "^6.2.0",
+        "luxon": "^2.0.2",
+        "regenerator-runtime": "^0.13.2",
+        "sass": "^1.41.1",
+        "sass-loader": "^12.1.0",
+        "stimulus": "^2.0.0",
+        "svelte": "^3.42.6",
+        "svelte-loader": "^3.1.2",
+        "ts-loader": "^9.2.5",
+        "typescript": "^4.4.3",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    }
+}
