@@ -78,7 +78,7 @@ In a production environment I would store this as UTC in the database and only d
 local timezone (e.g. so a Perth user applying for a Perth job sees the time that they applied, not the time for Sydney).
 I would suggest that the tool that generates the CSV used ISO8601 format for the date column as well.
 
-For the Svelte JS frontend, I use API Platform, which provides a REST API (and GraphQL) at `/api`
+For the Svelte JS frontend, I use API Platform, which provides a REST API (and GraphQL) at `https://localhost/api`
 Only the Jobs entity is exposed, applicants are access via their Doctrine relationship mapping.
 Only the GET item and collection operations are enabled as well (no POST, PATCH, DELETE).
 
